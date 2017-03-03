@@ -1,5 +1,5 @@
 
-var promise = Promise.reject(Error('error'))
+var promise = Promise.reject(new Error('error'))
 
 .then(undefined, function(error) {
   console.log(error.message)
