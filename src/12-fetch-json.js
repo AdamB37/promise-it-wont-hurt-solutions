@@ -1,9 +1,4 @@
-var http = require('q-io')
-
-fetch('http://localhost:1337')
-.then(function(response) {
-  http.read(response)
-  .then(function(response) {
-    console.log(JSON.parse(response));
-  })
-})
+var HTTP = require("q-io/http")
+HTTP.read('http://localhost:1337')
+.then(response => JSON.parse(response))
+.then(console.log)
