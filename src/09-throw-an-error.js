@@ -11,4 +11,4 @@ function parsedPromised(json) {
 
 parsedPromised(process.argv[2])
 .then(console.log)
-.catch(console.log)
+.catch(error => console.log(error.message))
